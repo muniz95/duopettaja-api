@@ -1,5 +1,5 @@
 class SkillsController < ApplicationController
-  before_action :set_skill, only: [:show, :update, :destroy]
+  before_action :set_skill, only: [:show, :update, :destroy, :lessons]
 
   # GET /skills
   def index
@@ -36,6 +36,11 @@ class SkillsController < ApplicationController
   # DELETE /skills/1
   def destroy
     @skill.destroy
+  end
+
+  def lessons
+    @lessons = @skill.lessons
+    render json: @lessons
   end
 
   private
