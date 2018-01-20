@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  category: MyString
+  expression: MyString
+  audio: MyString
+  weight: 1
+  lesson: one
+
+two:
+  category: MyString
+  expression: MyString
+  audio: MyString
+  weight: 1
+  lesson: two
