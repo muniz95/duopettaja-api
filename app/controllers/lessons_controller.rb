@@ -1,5 +1,5 @@
 class LessonsController < ApplicationController
-  before_action :set_lesson, only: [:show, :update, :destroy]
+  before_action :set_lesson, only: [:show, :update, :destroy, :questions]
 
   # GET /lessons
   def index
@@ -36,6 +36,11 @@ class LessonsController < ApplicationController
   # DELETE /lessons/1
   def destroy
     @lesson.destroy
+  end
+
+  def questions
+    @questions = @lesson.questions
+    render json: @questions, :include => :question_options
   end
 
   private
