@@ -40,7 +40,7 @@ class SkillsController < ApplicationController
 
   def lessons
     @lessons = @skill.lessons
-    render json: @lessons
+    render json: @lessons.map do |lesson| lesson.force_encoding("ASCII-8BIT").encode('UTF-8', undef: :replace, replace: '') end
   end
 
   private
