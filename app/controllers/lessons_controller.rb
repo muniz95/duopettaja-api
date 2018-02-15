@@ -1,5 +1,5 @@
 class LessonsController < ApplicationController
-  before_action :set_lesson, only: [:show, :update, :destroy, :questions]
+  before_action :set_lesson, only: [:show, :update, :destroy, :questions, :complete]
 
   # GET /lessons
   def index
@@ -41,6 +41,12 @@ class LessonsController < ApplicationController
   def questions
     @questions = @lesson.questions
     render json: @questions, :include => :options
+  end
+  
+  def complete
+    @lesson.completed = true
+    @lesson.save!
+    render json: 200
   end
 
   private
