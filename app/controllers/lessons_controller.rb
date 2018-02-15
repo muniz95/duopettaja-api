@@ -40,7 +40,7 @@ class LessonsController < ApplicationController
 
   def questions
     @questions = @lesson.questions
-    render json: @questions, :include => :question_options
+    render json: @questions, :include => :options
   end
 
   private
