@@ -33,7 +33,7 @@ module Seed
     {id: 31, name: "Personal pronouns", active: false},
     {id: 32, name: "Interrogative pronouns", active: false},
     {id: 33, name: "Irregular pronouns", active: false},
-    {id: 34, name: "Morphemes (prefix, suffix, etc)", active: false},
+    {id: 34, name: "Morphemes", active: false},
     {id: 35, name: "Nouns", active: false},
     {id: 36, name: "Postpositions", active: false},
     {id: 37, name: "Colors", active: false}
